@@ -1,0 +1,34 @@
+# Beard Logistics — Netlify Configuration
+
+[build]
+  publish = "."
+
+# Redirects
+[[redirects]]
+  from = "/warehousing"
+  to = "/warehousing/cross-docking.html"
+  status = 301
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+# Custom 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
+# Headers for performance
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
