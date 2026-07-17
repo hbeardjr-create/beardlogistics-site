@@ -3,14 +3,25 @@
 [build]
   publish = "."
 
-[[edge_functions]]
-  function = "site-content-refresh"
-  path = "/*"
-
-# Redirects
+# Canonical redirects
 [[redirects]]
   from = "/warehousing"
-  to = "/warehousing/cross-docking.html"
+  to = "/cross-docking.html"
+  status = 301
+
+[[redirects]]
+  from = "/warehousing/cross-docking"
+  to = "/cross-docking.html"
+  status = 301
+
+[[redirects]]
+  from = "/warehousing/cross-docking.html"
+  to = "/cross-docking.html"
+  status = 301
+
+[[redirects]]
+  from = "/bl-capability-statement"
+  to = "/capability-statement.html"
   status = 301
 
 [[redirects]]
@@ -18,21 +29,27 @@
   to = "/"
   status = 301
 
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # Custom 404
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 404
-
-# Headers for performance and fresh approved content
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "no-cache, no-store, must-revalidate"
-    X-Frame-Options = "SAMEORIGIN"
-    X-Content-Type-Options = "nosniff"
-
-[[headers]]
-  for = "/images/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000"
