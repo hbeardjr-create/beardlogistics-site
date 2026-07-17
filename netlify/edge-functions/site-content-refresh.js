@@ -15,8 +15,8 @@ export default async function siteContentRefresh(request, context) {
       .replace(/12\+\s*Years/gi, '10+ Years');
   }
 
-  // About Us: replace the legacy timeline with the approved company history.
-  if (url.pathname === '/about-us' || url.pathname === '/about-us.html') {
+  // About Us: replace the legacy timeline with the approved, expanded company history.
+  if (url.pathname === '/about-us' || url.pathname === '/about-us/' || url.pathname === '/about-us.html') {
     const timelineStart = html.indexOf('<div class="timeline" role="list">');
     const storyRightStart = html.indexOf('<div class="story-right">', timelineStart);
 
@@ -25,44 +25,44 @@ export default async function siteContentRefresh(request, context) {
             <div class="tl-item" role="listitem">
               <div class="tl-dot" aria-hidden="true"></div>
               <div class="tl-year">2012</div>
-              <div class="tl-title">Ready Set Tow Founded</div>
-              <p class="tl-desc">Henry Beard purchased a truck and trailer and started the original business, Ready Set Tow, a hotshot transportation company built on dependable service and hands-on execution.</p>
+              <div class="tl-title">Ready Set Tow — The Beginning</div>
+              <p class="tl-desc">Henry Beard purchased his first truck and trailer and launched Ready Set Tow, a hands-on hotshot transportation company. Those early years were built on long hours, direct customer service, careful load planning, and a willingness to personally manage every detail from pickup through delivery. The experience created the operating discipline, customer relationships, and real-world transportation knowledge that would later become the foundation of Beard Logistics.</p>
             </div>
             <div class="tl-item" role="listitem">
               <div class="tl-dot" aria-hidden="true"></div>
               <div class="tl-year">2016</div>
-              <div class="tl-title">Beard Logistics Launched</div>
-              <p class="tl-desc">Beard Logistics launched in Baton Rouge as a Landstar agency, expanding the company from asset-based hotshot transportation into broader freight and logistics services.</p>
+              <div class="tl-title">Beard Logistics Launched as a Landstar Agency</div>
+              <p class="tl-desc">Building on the experience gained through Ready Set Tow, Henry expanded the business and launched Beard Logistics as a Landstar agency. This milestone provided access to a broader national transportation network, more equipment options, stronger carrier capacity, and the ability to serve customers with freight brokerage, expedited transportation, specialized hauling, and full truckload solutions across the United States.</p>
             </div>
             <div class="tl-item" role="listitem">
               <div class="tl-dot" aria-hidden="true"></div>
               <div class="tl-year">2018</div>
-              <div class="tl-title">ACME Truck Line Terminal Acquired</div>
-              <p class="tl-desc">The company acquired the ACME Truck Line Baton Rouge terminal, strengthening local and regional trucking capacity and expanding specialized transportation operations.</p>
+              <div class="tl-title">ACME Truck Line Baton Rouge Terminal Acquired</div>
+              <p class="tl-desc">Beard Logistics expanded its asset-based and energy-sector capabilities by acquiring the ACME Truck Line terminal in Baton Rouge. The terminal strengthened the company’s presence in oil and gas, petrochemical, pipeline, industrial, and emergency freight transportation while adding local dispatch control, dedicated owner-operator relationships, and specialized equipment capacity throughout Louisiana and the Gulf Coast.</p>
             </div>
             <div class="tl-item" role="listitem">
               <div class="tl-dot" aria-hidden="true"></div>
               <div class="tl-year">2019</div>
-              <div class="tl-title">Freight Broker Authority Acquired</div>
-              <p class="tl-desc">Beard Logistics secured its freight broker authority, expanding access to a nationwide carrier network and supporting larger, more complex customer requirements.</p>
+              <div class="tl-title">Independent Freight Broker Authority Acquired</div>
+              <p class="tl-desc">The company secured its own freight broker authority, creating greater flexibility to design transportation solutions, build direct carrier relationships, and support customers beyond any single network. This expansion strengthened Beard Logistics’ ability to manage complex shipments, source outside capacity, negotiate competitive transportation rates, and provide customers with one accountable logistics partner.</p>
             </div>
             <div class="tl-item" role="listitem">
               <div class="tl-dot" aria-hidden="true"></div>
               <div class="tl-year">2022</div>
-              <div class="tl-title">Cross-Docking &amp; Warehouse Expansion</div>
-              <p class="tl-desc">Cross-docking and warehouse capabilities expanded in Baton Rouge, adding storage, freight recovery, rework, transloading, and distribution support near I-10 and I-12.</p>
+              <div class="tl-title">Cross-Docking and Warehouse Operations Expanded</div>
+              <p class="tl-desc">Beard Logistics expanded into cross-docking, transloading, freight recovery, short-term storage, rework, restacking, and warehouse support from its Baton Rouge facility near I-10 and I-12. This investment allowed the company to solve rejected-load problems, recover shifted freight, transfer cargo between trailers, stage products, and provide customers with a dependable local logistics hub for time-sensitive and specialized projects.</p>
             </div>
             <div class="tl-item" role="listitem">
               <div class="tl-dot" aria-hidden="true"></div>
               <div class="tl-year">2025</div>
-              <div class="tl-title">Chemical Distribution Launched</div>
-              <p class="tl-desc">Beard Logistics launched chemical distribution services, extending its capabilities across Louisiana's industrial and petrochemical markets.</p>
+              <div class="tl-title">Chemical Distribution Division Launched</div>
+              <p class="tl-desc">The company launched chemical distribution services to better support industrial, commercial, transportation, and facility customers throughout Louisiana and the Gulf South. This division combined Beard Logistics’ transportation expertise, warehousing capabilities, regulatory awareness, and customer-service model to provide a more complete supply-chain solution for chemical products and related distribution needs.</p>
             </div>
             <div class="tl-item" role="listitem">
               <div class="tl-dot" aria-hidden="true"></div>
               <div class="tl-year">Today</div>
-              <div class="tl-title">Seven-Figure Operation &amp; Growing</div>
-              <p class="tl-desc">Today, Beard Logistics is a seven-figure transportation, warehousing, freight brokerage, and distribution operation serving customers across the Gulf South and nationwide—and continuing to grow.</p>
+              <div class="tl-title">A Seven-Figure Logistics Operation — Still Growing</div>
+              <p class="tl-desc">Today, Beard Logistics operates as a seven-figure, veteran-owned logistics company with capabilities spanning freight brokerage, expedited transportation, specialized hauling, ACME terminal operations, cross-docking, warehousing, freight recovery, and chemical distribution. What began with one truck and one trailer has grown into a multi-division operation serving industrial companies, national corporations, government agencies, and customers across the Gulf South and nationwide—with the same commitment to reliability, accountability, and moving freight forward.</p>
             </div>
           </div>
         </div>
