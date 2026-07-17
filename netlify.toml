@@ -3,31 +3,120 @@
 [build]
   publish = "."
 
-# Canonical redirects
+# Force every public route to the unified Mission Zero site.
+[[redirects]]
+  from = "/home"
+  to = "/index.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about-us"
+  to = "/about-us.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/our-services"
+  to = "/services.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/industries-served"
+  to = "/industries-served.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/certifications"
+  to = "/certifications.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/quote-request"
+  to = "/quote-request.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/cross-docking"
+  to = "/cross-docking.html"
+  status = 200
+  force = true
+
 [[redirects]]
   from = "/warehousing"
   to = "/cross-docking.html"
-  status = 301
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/warehousing/cross-docking"
   to = "/cross-docking.html"
-  status = 301
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/warehousing/cross-docking.html"
   to = "/cross-docking.html"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/freight-recovery"
+  to = "/freight-recovery.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chemical-distribution"
+  to = "/chemical-distribution.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/capability-statement"
+  to = "/capability-statement.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/bl-capability-statement"
   to = "/capability-statement.html"
-  status = 301
+  status = 200
+  force = true
 
 [[redirects]]
-  from = "/home"
-  to = "/"
-  status = 301
+  from = "/privacy-policy"
+  to = "/privacy-policy.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/terms-and-conditions"
+  to = "/terms-and-conditions.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 200
+  force = true
 
 # Security headers
 [[headers]]
@@ -37,10 +126,6 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-
-[[headers]]
-  for = "/*.html"
-  [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
