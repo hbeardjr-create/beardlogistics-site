@@ -17,6 +17,9 @@ export default async function siteContentRefresh(request, context) {
 
   // About Us: replace the legacy timeline with the approved, expanded company history.
   if (url.pathname === '/about-us' || url.pathname === '/about-us/' || url.pathname === '/about-us.html') {
+    // The founder portrait is JPEG data that was incorrectly labeled as PNG.
+    html = html.replace(/data:image\/png;base64,\/9j\//g, 'data:image/jpeg;base64,/9j/');
+
     const timelineStart = html.indexOf('<div class="timeline" role="list">');
     const storyRightStart = html.indexOf('<div class="story-right">', timelineStart);
 
