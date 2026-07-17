@@ -3,6 +3,10 @@
 [build]
   publish = "."
 
+[[edge_functions]]
+  function = "site-content-refresh"
+  path = "/*"
+
 # Redirects
 [[redirects]]
   from = "/warehousing"
@@ -20,11 +24,11 @@
   to = "/index.html"
   status = 404
 
-# Headers for performance
+# Headers for performance and fresh approved content
 [[headers]]
   for = "/*.html"
   [headers.values]
-    Cache-Control = "public, max-age=3600"
+    Cache-Control = "no-cache, no-store, must-revalidate"
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
 
