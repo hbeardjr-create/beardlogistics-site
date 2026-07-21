@@ -60,7 +60,7 @@
 
 [[redirects]]
   from = "/warehousing"
-  to = "/cross-docking.html"
+  to = "/warehousing.html"
   status = 200
   force = true
 
