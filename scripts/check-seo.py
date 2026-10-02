@@ -33,9 +33,9 @@ for file in sorted(ROOT.rglob('*.html')):
  check(len(canon)==1,'exactly one canonical required')
  check(bool(desc),'description required')
  check(len([a for a in tags('meta') if a.get('name')=='description'])==1,'duplicate description')
- expected=BASE+('/' if relative=='index.html' else '/'+relative)
+ expected=BASE+('/' if relative=='index.html' else '/'+relative.removesuffix('.html'))
  utility=relative in ('thank-you.html','warehousing/cross-docking.html')
- check(canon==[BASE+'/cross-docking.html' if relative.startswith('warehousing/') else expected],'canonical mismatch')
+ check(canon==[BASE+'/cross-docking' if relative.startswith('warehousing/') else expected],'canonical mismatch')
  if utility:check('noindex' in metas.get('robots',''),'utility page must be noindex')
  else:
   check('noindex' not in metas.get('robots',''),'public page is noindex')
