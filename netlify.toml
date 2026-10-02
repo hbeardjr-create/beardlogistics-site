@@ -5,7 +5,7 @@
 
 [[redirects]]
   from = "/home"
-  to = "/index.html"
+  to = "/"
   status = 301
   force = true
 
@@ -23,8 +23,8 @@
 
 [[redirects]]
   from = "/our-services"
-  to = "/services.html"
-  status = 200
+  to = "/services"
+  status = 301
   force = true
 
 [[redirects]]
@@ -65,13 +65,13 @@
 
 [[redirects]]
   from = "/warehousing/cross-docking"
-  to = "/cross-docking.html"
-  status = 200
+  to = "/cross-docking"
+  status = 301
   force = true
 
 [[redirects]]
   from = "/warehousing/cross-docking.html"
-  to = "/cross-docking.html"
+  to = "/cross-docking"
   status = 301
   force = true
 
@@ -155,8 +155,8 @@
 
 [[redirects]]
   from = "/bl-capability-statement"
-  to = "/capability-statement.html"
-  status = 200
+  to = "/capability-statement"
+  status = 301
   force = true
 
 [[redirects]]
@@ -190,6 +190,24 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/distribution"
+  to = "/distribution.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/contract-administration"
+  to = "/contract-administration.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/facility-services"
+  to = "/facility-services.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/*"
