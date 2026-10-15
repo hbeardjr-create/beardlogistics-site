@@ -210,6 +210,19 @@
   force = true
 
 [[redirects]]
+  from = "/car-wash-chemicals"
+  to = "/car-wash-chemicals.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/"
+  to = "/car-wash-chemicals"
+  status = 302
+  force = true
+  query = { interest = "car-wash-distribution" }
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 404
