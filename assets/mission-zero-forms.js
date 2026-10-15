@@ -43,7 +43,7 @@
 
   function quotePayload(form) {
     return {
-      source: 'beardlogistic.com/quote-request',
+      source: form.dataset.source || 'beardlogistic.com/quote-request',
       form_name: 'quote-bot',
       customer_name: value(form, 'name'),
       company_name: value(form, 'company'),
