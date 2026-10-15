@@ -223,6 +223,33 @@
   query = { interest = "car-wash-distribution" }
 
 [[redirects]]
+  from = "/janitorial-chemicals"
+  to = "/janitorial-chemicals.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/"
+  to = "/janitorial-chemicals"
+  status = 302
+  force = true
+  query = { interest = "janitorial-distribution" }
+
+[[redirects]]
+  from = "/"
+  to = "/janitorial-chemicals"
+  status = 302
+  force = true
+  query = { interest = "janitorial-chemicals" }
+
+[[redirects]]
+  from = "/"
+  to = "/janitorial-chemicals"
+  status = 302
+  force = true
+  query = { interest = "janitorial-chemical-distribution" }
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 404
