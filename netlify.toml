@@ -2,6 +2,7 @@
 
 [build]
   publish = "."
+  functions = "netlify/functions"
 
 [[redirects]]
   from = "/home"
@@ -274,6 +275,31 @@
   force = true
 
 [[redirects]]
+  from = "/pressure-washing-partners"
+  to = "/pressure-washing-partners.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pressure-washing-partner-thank-you"
+  to = "/pressure-washing-partner-thank-you.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/landscaping-partners"
+  to = "/landscaping-partners.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/landscaping-partner-thank-you"
+  to = "/landscaping-partner-thank-you.html"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 404
+
