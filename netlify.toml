@@ -262,6 +262,18 @@
   force = true
 
 [[redirects]]
+  from = "/janitorial-partners"
+  to = "/janitorial-partners.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/janitorial-partner-thank-you"
+  to = "/janitorial-partner-thank-you.html"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 404
