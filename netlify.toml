@@ -250,6 +250,18 @@
   query = { interest = "janitorial-chemical-distribution" }
 
 [[redirects]]
+  from = "/dump-truck-partners"
+  to = "/dump-truck-partners.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/dump-truck-partner-thank-you"
+  to = "/dump-truck-partner-thank-you.html"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 404
